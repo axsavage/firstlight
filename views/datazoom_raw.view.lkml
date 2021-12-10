@@ -3,6 +3,37 @@ view: datazoom_raw {
   sql_table_name: `@{BIGQUERY_PROJECT_NAME}.@{BIGQUERY_DATASET_NAME}.@{DATAZOOM_RAW_TABLE_NAME}`
 
     ;;
+  dimension: sessionID {
+    type: string
+    sql: ${TABLE}.sessionID ;;
+  }
+
+  dimension: userID {
+    type: string
+    sql: ${TABLE}.userID ;;
+  }
+
+  dimension: providerID {
+    type: string
+    sql: ${TABLE}.providerID ;;
+  }
+
+  dimension: contentID {
+    type: string
+    sql: ${TABLE}.contentID ;;
+  }
+
+  dimension: contentTitle {
+    type: string
+    sql: ${TABLE}.contentTitle ;;
+  }
+
+  dimension: contentGenre {
+    type: string
+    sql: ${TABLE}.contentGenre ;;
+  }
+
+
 
   dimension: abs_shift {
     type: string
@@ -946,6 +977,5 @@ view: datazoom_raw {
 
     }
   }
-
 
 }

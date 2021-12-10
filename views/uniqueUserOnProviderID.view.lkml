@@ -1,5 +1,5 @@
 
- view: uniqueUserOnProvideID {
+ view: uniqueUserOnProviderID {
    derived_table: {
      sql: Select distinct userID,  contentID, contentTitle, providerID  FROM `flm-gcp-lab.DZ_DataSet.Shaka_Player`
      where providerID is not null

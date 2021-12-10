@@ -17,7 +17,7 @@ explore: datazoom_raw {}
 
 explore: userWatchdDistinctContent {}
 
-explore: uniqueUserOnProvideID {}
+explore: uniqueUserOnProviderID {}
 
 explore: contentMaxUserWatchTime {}
 

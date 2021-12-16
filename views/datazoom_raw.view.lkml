@@ -13,9 +13,20 @@ view: datazoom_raw {
     sql: ${TABLE}.userID ;;
   }
 
+  measure: distinct_users {
+    type: count_distinct
+    sql: ${userID} ;;
+  }
+
+
   dimension: providerID {
     type: string
     sql: ${TABLE}.providerID ;;
+  }
+
+  measure: distinct_providers {
+    type: count_distinct
+    sql: ${providerID} ;;
   }
 
   dimension: contentID {

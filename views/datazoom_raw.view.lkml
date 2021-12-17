@@ -13,9 +13,20 @@ view: datazoom_raw {
     sql: ${TABLE}.userID ;;
   }
 
+  measure: distinct_userID {
+    type: count_distinct
+    sql: ${userID};;
+  }
+
   dimension: providerID {
     type: string
     sql: ${TABLE}.providerID ;;
+  }
+
+  measure: distinct_providerID {
+    type: count_distinct
+    sql: ${providerID} ;;
+    drill_fields: [userID,contentID,contentTitle, providerID]
   }
 
   dimension: contentID {
@@ -23,9 +34,18 @@ view: datazoom_raw {
     sql: ${TABLE}.contentID ;;
   }
 
+  measure: distinct_contentID{
+    type: count_distinct
+    sql: ${contentID} ;;
+  }
   dimension: contentTitle {
     type: string
     sql: ${TABLE}.contentTitle ;;
+  }
+
+  measure: distinct_contentTitle{
+      type: count_distinct
+      sql: ${contentTitle} ;;
   }
 
   dimension: contentGenre {

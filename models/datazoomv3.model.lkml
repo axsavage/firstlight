@@ -11,7 +11,7 @@ datagroup: datazoomv3_default_datagroup {
   max_cache_age: "5 minute"
 }
 
-persist_with: datazoomv3_default_datagroup
+# persist_with: datazoomv3_default_datagroup
 
 explore: datazoom_raw {}
 

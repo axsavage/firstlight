@@ -23,6 +23,8 @@ explore: contentMaxUserWatchTime {}
 
 explore: last5MinUserSession {}
 
+explore: watch_content {}
+
 explore: viewing_users {
 
   join: datazoom_raw {
